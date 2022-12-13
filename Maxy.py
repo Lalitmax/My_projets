@@ -252,11 +252,12 @@ def doooo(text):
         speak("opening file explorer")
         exit()
     elif text in ["shutdown","shut down","shutdown laptop","laptop shut down","laptop shutdown","shut down laptop","shutdown computer","shut down computer","computer shutdown","computer shut down"]:
-        os.startfile("shutdown")
-        speak("shutdown")
+        a=subprocess.run("shutdown /s")
+        speak("hello user i am going to shuting down your computer, wait some seconds")
         exit()
     elif text in ["restart","restart laptop","laptop restart","computer restart","restart computer"]:
-        os.startfile("shutdown -r")
+        os.startfile("shutdown /r")
+        speak("hello user i am going to restarting  your computer, wait some seconds")
         exit()
     elif text in ["open powershell","powershell open"]:
         os.startfile("powershell")
