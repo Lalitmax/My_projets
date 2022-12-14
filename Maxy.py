@@ -49,7 +49,9 @@ def speak(text):
 
 
 
-def wishme():
+def wishme(text):
+    print(text)
+    print()
     if hour>=0 and hour<=12:
         print('good morning sir,\n I am maxi, \n  how may i help you')
         speak('good morning sir, I am maxi, \n  how may i help you')
@@ -98,6 +100,8 @@ def command():
 
 def doooo(text):
     if text in ['what is the time', "what's the time",'is time','time now',]:
+        print(text)
+        print()
         if hour>=12:
             print(hour,":",minut,'PM')
             speak(str(hour)+":"+str(minut)+'PM')
@@ -106,6 +110,8 @@ def doooo(text):
             speak(str(hour)+":"+str(minut)+'Am')
 
     elif ("weather") in text:
+        print(text)
+        print()
         
 
         t=text.split()
@@ -135,7 +141,9 @@ def doooo(text):
         
 
 
-    elif "temperature" in text:
+    elif "temperature in" in text:
+        print(text)
+        print()
         t=text.split()
         
         city_name=t[-1]
@@ -152,6 +160,8 @@ def doooo(text):
         
 
     elif text in ['send mail to lalit','send email to lalit','send mail lalit']:
+        print(text)
+        print(text)
         print('what do you want to write.. ')
         mail=command()
         sendmail(mail)
@@ -237,6 +247,8 @@ def doooo(text):
         speak("opening this pc")
         exit()
     elif text in ["open control Panel","control Panel open"]:
+        
+        print()
         os.startfile("control")
         speak("opening control Panel")
         exit()
@@ -285,6 +297,8 @@ def doooo(text):
     elif text in ["open code","code open"]:
         os.startfile("code")
         exit()
+    elif text in ["wishme","wish me"]:
+        wishme(text)
     elif text in ["open microsoft edge","Microsoft edge open"]:
         os.startfile("msedge")
         speak("opening microsoft edge")
@@ -302,24 +316,36 @@ def doooo(text):
         speak("opening powerpoint")
         exit()
     elif text in ['how are you']:
+        print(text)
+        print()
         print('i am fine.\ntell me how may i help you')
         speak('i am fine, tell me how may i help you')
     elif text in ['what is your name',"what's your name"]:
+        print(text)
+        print()
         print('''well, my name's maxy" \ni wish that everyone\nhad a nickname as cool as mine\nso plz keep small and sort your name  ''')
         speak('''well, my name is maxy, i wish that everyone had a nickname as cool as mine, so plz keep small your name  ''')
     elif text in ['are you marry me',"will you marry me"]:
         print("this is one of things \nwe'd both have to agree\non i'd prefer to keep \nour friendship as it is.")
         speak("this is one of things, we'd both have to agree on i'd prefer to keep  our friendship as it is. ")
     elif text in ['what can you do for me']:
+        print(text)
+        print()
         print("i can do all the work \n which is in my might")
         speak("i can do all the work, which is in my might")
     elif text in ["do something for me"]:
+        print(text)
+        print()
         print("Ask me any problem \ni will try to solve it \nfor you")
         speak("Ask me any problem, i will try to solve it for you")
-    elif text in ['date',"what's date","what is date","date","what's the date today","today date","today's date"]:
+    elif text in ['date',"what's date","what is date","date","what's the date today","today date","today's date","what is the date","what's the date"]:
+        print(text)
+        print()
         print(date)
         speak(date)
     elif text in ["tell me some jokes","tell some jokes","tell me some joke","kucch joke sunao","kuchh jokes sunao",'tell me joke ','tell me jokes']:
+        print(text)
+        print()
         print("Air hostess asked lalu \nPrasad yadav. \nSir are you vegetarian or \nNon vegetarian \nLalu said I am indian \nAir hostess said okay, \nAre you shakahari or mansahari \nLalu said hat sasuri I am Bihari")
         speak("Air hostess asked lalu Prasad yadav. Sir are you vegetarian or Non vegetarian, Lalu said I am indian. Air hostess said okay, Are you shakahari or mansahari, Lalu said hat sasuri I am Bihari")
     elif "wikipedia" in text:
@@ -327,6 +353,8 @@ def doooo(text):
         print(result)
         speak(result)
     elif "print table of" in text:
+        print(text)
+
         nu=text.split()
         nu=int(nu[-1])
         for i in range(1,11):
@@ -349,9 +377,13 @@ def doooo(text):
         
         
     elif text in ["do you know chitkara university"]:
-        print("yes i know chitkara university, \nit is best private university in punjab ")
-        speak("yes i know chitkara university, it is best private university in punjab ")
+        print(text)
+        print()
+        print("yes i know chitkara university, \nit is the  best private university in the punjab ")
+        speak("yes i know chitkara university, it is best private university in the punjab ")
     elif  "factorial" in text:
+        print(text)
+        print()
 
         fact=str(text)
         fact=fact.split()
@@ -370,6 +402,7 @@ def doooo(text):
 
     
     else:
+        
         print("sorry i don't understand")
         speak("sorry i don't understand")
 
